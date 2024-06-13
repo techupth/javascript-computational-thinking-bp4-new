@@ -82,3 +82,32 @@ let orders = [
 ];
 
 // Start coding here
+
+function mostTotalProduct(product)
+{
+  let number;
+  let newProduct=product;
+  let mostprice=0;
+  for(let i=0; i< product.length; i++)
+    {
+      let price=0;
+      let quantity=0;
+      let sum=0;
+      let inProduct=newProduct[i];
+    
+      for(let key in inProduct)
+      {
+        if(key==="productPrice"){price=inProduct[key];}
+        else if(key==="productQuantity"){quantity=inProduct[key];}
+      }
+      sum= price*quantity ;
+      if (sum >= mostprice)
+      {
+        mostprice=sum;
+        number=i;
+      } 
+  }
+  return console.log(newProduct[number]);
+}
+mostTotalProduct(orders);
+
