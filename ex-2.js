@@ -82,3 +82,37 @@ let orders = [
 ];
 
 // Start coding here
+function paidBirdie(product)
+{
+let sum;
+let sumString;
+let newProduct=product;
+let totalNumber="";
+for (let i=0; i<newProduct.length; i++)
+  {
+    let price;
+    let quantity
+    let inProduct=newProduct[i];
+
+    for (let key in inProduct)
+      {
+        if(inProduct[key]==="Birdie Shepland")
+          {
+            for (let key in inProduct)
+            {
+            if(key ==="productPrice") {price=inProduct[key]}
+            if(key ==="productQuantity") {quantity=inProduct[key]}
+            sum=price*quantity;
+            }
+          }
+      }
+  }
+   sumString=String(sum);
+   for(let i=0; i<sumString.length; i++)
+   {
+    if ((i+1)%3===0&&i!==sumString.length-1){totalNumber=totalNumber+sumString[i]+",";}
+    else {totalNumber=totalNumber+sumString[i];}
+   }
+  return console.log("Total paid amount of Birdie Shepland: "+totalNumber+" Baht");
+}
+paidBirdie(orders);
