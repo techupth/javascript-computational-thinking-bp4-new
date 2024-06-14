@@ -82,3 +82,21 @@ let orders = [
 ];
 
 // Start coding here
+function Total (order)
+{
+  let price;
+  let quantity;
+  let sum=0;
+  for(let i=0; i<order.length; i++)
+    {
+      let totalOrder=order[i];
+      for (let key in totalOrder)
+        {
+          if(key==="productPrice") {price=totalOrder[key];}
+          else if(key==="productQuantity"){quantity=totalOrder[key];}
+        }
+        sum= sum + (price*quantity);
+    }
+    return console.log("Total-order-prices : "+sum+" Baht");
+}
+Total(orders);
