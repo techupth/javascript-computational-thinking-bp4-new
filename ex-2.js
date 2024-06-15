@@ -82,3 +82,22 @@ let orders = [
 ];
 
 // Start coding here
+function paidBirdie(product)
+{
+let sum;
+let newNumber;
+for (let i=0; i<product.length; i++)
+  {
+    let price;
+    let quantity;
+        if(product[i].customerName==="Birdie Shepland")
+          {
+            sum=product[i].productPrice*product[i].productQuantity;
+          }
+            
+  }
+  newNumber=sum.toLocaleString();
+  //console.log(newNumber);
+  return console.log("Total paid amount of Birdie Shepland: "+newNumber+" Baht");
+}
+paidBirdie(orders);
