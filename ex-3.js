@@ -87,13 +87,10 @@ function findJcb(product)
   let jcb=[];
  for (let i=0; i<product.length; i++)
   {
-    let inProduct=product[i];
-    for(let key in inProduct)
-      {
-        if(inProduct[key]==="jcb")
-          {jcb.push(inProduct);}
-      }
+        if(product[i].creditCardType==="jcb")
+          {jcb.push(product[i]);}   
   }
   return console.log(jcb);
 }
+
 findJcb(orders);
